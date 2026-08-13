@@ -1,0 +1,778 @@
+/* ==========================================================================
+   Menuvem.RJ - Interactive Components & Specific Section Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CALCULADORA DE FATURAMENTO & CARDS DE PLANOS (TCG STYLE)
+   -------------------------------------------------------------------------- */
+.calc-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--glass-shadow);
+  margin-bottom: 4rem;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.calc-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+}
+
+.calc-faturamento-display {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: rgba(0, 210, 255, 0.1);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glow);
+  box-shadow: var(--glow-shadow);
+}
+
+.calc-slider-box {
+  margin-bottom: 2rem;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #1e2638;
+  outline: none;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent-rj-gold));
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
+  border: 3px solid #ffffff;
+  transition: transform 0.15s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pricing-toggle-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.pricing-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-toggle-btn.active {
+  background: var(--primary);
+  color: #000000;
+  border-color: var(--primary);
+  font-weight: 700;
+  box-shadow: var(--glow-shadow);
+}
+
+.save-badge {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--accent-rj-neon);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+}
+
+/* Grid de Cards dos Planos */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.plan-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  position: relative;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(16px);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glow-shadow);
+}
+
+.plan-card.recommended {
+  border: 2px solid var(--primary);
+  background: linear-gradient(180deg, rgba(0, 210, 255, 0.1) 0%, rgba(18, 22, 35, 0.9) 100%);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.25);
+}
+
+.plan-card-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  color: #000;
+  font-size: 0.7rem;
+  font-family: var(--font-pixel);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.plan-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  min-height: 40px;
+}
+
+.plan-price-box {
+  margin-bottom: 1.8rem;
+}
+
+.plan-currency {
+  font-size: 1.2rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-main);
+}
+
+.plan-period {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.plan-features {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.plan-features li svg {
+  color: var(--accent-rj-neon);
+  flex-shrink: 0;
+}
+
+.economy-callout {
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px dashed var(--accent-rj-neon);
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--accent-rj-neon);
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. SIMULADOR DE CARDÁPIO DIGITAL (DEMO INTERATIVA AO VIVO)
+   -------------------------------------------------------------------------- */
+.demo-section {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0d121f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.demo-info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.demo-info p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.demo-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.demo-feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.demo-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid var(--border-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Smartphone Mockup Frame */
+.phone-mockup {
+  width: 100%;
+  max-width: 360px;
+  height: 680px;
+  margin: 0 auto;
+  background: #000000;
+  border: 12px solid #1f2430;
+  border-radius: 44px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(0, 210, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-notch {
+  width: 140px;
+  height: 22px;
+  background: #1f2430;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  z-index: 100;
+}
+
+.phone-screen {
+  background: #0f131d;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 1.8rem;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-store-header {
+  padding: 1rem;
+  background: linear-gradient(135deg, #161c2e, #0f131d);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.phone-store-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-rj-coral), var(--accent-rj-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.phone-store-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.phone-store-info span {
+  font-size: 0.75rem;
+  color: var(--accent-rj-neon);
+}
+
+.phone-categories {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.phone-cat-chip {
+  padding: 0.35rem 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.phone-cat-chip.active {
+  background: var(--primary);
+  color: #000;
+  font-weight: 700;
+}
+
+.phone-menu-items {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.menu-item-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.menu-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.menu-item-details {
+  flex-grow: 1;
+}
+
+.menu-item-details h5 {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.menu-item-details p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.menu-item-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0.3rem;
+}
+
+.btn-add-item {
+  background: rgba(0, 210, 255, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-add-item:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+.phone-cart-bar {
+  background: #161b27;
+  border-top: 1px solid var(--border-light);
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-cart-info {
+  font-size: 0.8rem;
+}
+
+.phone-cart-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--primary);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. O FATOR LOCAL RJ & RECURSOS
+   -------------------------------------------------------------------------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-5px);
+}
+
+.feature-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(58, 123, 213, 0.15));
+  border: 1px solid var(--border-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 1.4rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. DEPOIMENTOS DE RESTAURANTES DO RJ
+   -------------------------------------------------------------------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  position: relative;
+}
+
+.testimonial-stars {
+  color: var(--accent-rj-gold);
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--primary);
+}
+
+.author-info h4 {
+  font-size: 0.95rem;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. FAQ ACCORDION
+   -------------------------------------------------------------------------- */
+.faq-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.4rem 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding: 0 1.8rem;
+}
+
+.faq-item.active {
+  border-color: var(--border-glow);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 1.8rem 1.4rem 1.8rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. MODAL DE CADASTRO MULTI-STEP & MOBILE DRAWER
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: #0f1422;
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 520px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8), var(--glow-shadow);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+}
+
+/* Floating WhatsApp Badge */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+}
+
+/* Mobile Nav Drawer */
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: #0b0f19;
+  z-index: 1500;
+  padding: 3rem 2rem;
+  transition: right 0.4s ease;
+  border-left: 1px solid var(--border-light);
+}
+
+.mobile-menu-drawer.active {
+  right: 0;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mobile-menu-links a {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .calc-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .demo-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .phone-mockup {
+    height: 580px;
+  }
+}
