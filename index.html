@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Menuvem.RJ - O sistema de gestão de pedidos e cardápio digital oficial do Estado do Rio de Janeiro. Sem comissão por pedido, suporte humano 7 dias por semana para Rio de Janeiro capital, Niterói, Baixada Fluminense, Região dos Lagos e todo o estado.">
+  <meta name="keywords"
+    content="cardápio digital rj, gestor de pedidos rio de janeiro, automação restaurantes rj, sefaz rj nfc-e, cardapio whatsapp niteroi, delivery baixada fluminense, menuvem rj">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://menuvemrj.com.br/">
+  <meta property="og:title" content="Menuvem.RJ | Cardápio Digital & Plataforma de Vendas sem Comissão no RJ">
+  <meta property="og:description"
+    content="Aumente o faturamento do seu restaurante no Rio de Janeiro com cardápio próprio sem comissão, montagem gratuita do cardápio, 30 dias grátis e suporte local dedicado.">
+  <meta property="og:image" content="./assets/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/rj-flag.svg">
+  <title>Menuvem.RJ | Cardápio Digital & Gestão de Pedidos no Rio de Janeiro</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo" id="header-logo">
+        <img src="./assets/logo.svg" alt="Logo Menuvem.RJ" height="36">
+        <img src="./assets/rj-flag.svg" alt="Bandeira RJ" class="logo-flag">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#planos">Planos & Calculadora</a></li>
+          <li><a href="#demo">Simulador ao Vivo</a></li>
+          <li><a href="#fator-local">O Fator Local RJ</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="https://painel.menuvem.com.br" target="_blank" class="btn btn-secondary">
+          Login
+        </a>
+        <button class="btn btn-primary btn-signup-open" id="nav-btn-cadastrar">
+          Cadastre sua Loja
+        </button>
+      </div>
+
+      <button class="menu-toggle" aria-label="Abrir Menu Mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-drawer">
+    <div class="mobile-menu-links">
+      <a href="#planos">Planos & Calculadora</a>
+      <a href="#demo">Simulador ao Vivo</a>
+      <a href="#fator-local">O Fator Local RJ</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <a href="https://painel.menuvem.com.br" target="_blank" class="btn btn-secondary" style="width: 100%;">Login</a>
+      <button class="btn btn-primary btn-signup-open" style="width: 100%;">Cadastre-se Grátis</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow-bg"></div>
+    <div class="container hero-content">
+      <span class="badge badge-rj reveal">
+        <img src="./assets/rj-flag.svg" alt="Bandeira RJ" width="16" height="12" style="border-radius: 2px;">
+        Representante Oficial da Menuvem no Rio de Janeiro
+      </span>
+
+      <h1 class="hero-title reveal delay-100">
+        A Plataforma de vendas preferida do <span>Rio de Janeiro</span> com 30 dias grátis.
+      </h1>
+
+      <p class="hero-description reveal delay-200">
+        Cardápio digital sem taxas de comissão por pedido. Nós personalizamos a plataforma e montamos o seu cardápio gratuitamente. Suporte humano todos os dias para a Capital, Niterói, Baixada Fluminense e todo o estado.
+      </p>
+
+      <div class="hero-ctas reveal delay-300">
+        <a href="https://wa.me/5521999998888?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Menuvem.RJ%20e%20gostaria%20de%20ativar%20meus%2030%20dias%20gr%C3%A1tis!"
+          target="_blank" class="btn btn-primary" id="hero-btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.727-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.588 2.022 14.12 1 11.66 1c-5.456 0-9.9 4.398-9.905 9.829-.001 1.765.485 3.488 1.408 5.093l-.999 3.648 3.843-.984zm11.23-6.842c-.303-.151-1.793-.884-2.071-.985-.278-.101-.48-.151-.681.151-.202.303-.781.985-.957 1.186-.177.202-.353.227-.656.075-.303-.151-1.28-.472-2.438-1.503-.9-.8-1.507-1.787-1.684-2.09-.177-.302-.018-.465.133-.614.136-.134.303-.353.454-.528.152-.177.202-.303.303-.505.101-.202.051-.378-.025-.528-.076-.151-.681-1.641-.933-2.246-.247-.591-.497-.512-.681-.512-.177-.008-.379-.008-.581-.008-.202 0-.531.075-.809.378-.278.302-1.061 1.037-1.061 2.531 0 1.493 1.087 2.936 1.238 3.138.152.202 2.138 3.262 5.177 4.57.722.311 1.286.497 1.726.637.725.23 1.385.197 1.906.12.581-.087 1.793-.73 2.046-1.437.252-.705.252-1.31.177-1.437-.076-.127-.278-.202-.581-.353z" />
+          </svg>
+          Experimente 30 Dias Grátis no WhatsApp
+        </a>
+        <button class="btn btn-secondary btn-signup-open">
+          Cadastre sua Loja
+        </button>
+      </div>
+
+      <p class="hero-notice reveal delay-350">
+        * <strong>Aviso importante:</strong> Para obter o bônus de <strong>30 dias gratuitos</strong> no Estado do Rio de Janeiro, realize seu cadastro agora e valide a promoção com nosso <strong>Suporte RJ via WhatsApp</strong>.
+      </p>
+
+      <!-- Dashboard Mockup Showcase Frame -->
+      <div class="hero-visual-wrapper reveal delay-400">
+        <div class="hero-mockup-inner">
+          <div style="text-align: center; padding: 2rem;">
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+              <div style="background: rgba(0, 210, 255, 0.1); border: 1px solid var(--primary); padding: 1rem 1.5rem; border-radius: 12px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Vendas Hoje (RJ)</span>
+                <strong style="font-size: 1.8rem; color: var(--primary);">R$ 3.840,00</strong>
+              </div>
+              <div style="background: rgba(0, 230, 118, 0.1); border: 1px solid var(--accent-rj-neon); padding: 1rem 1.5rem; border-radius: 12px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Comissão Paga ao iFood</span>
+                <strong style="font-size: 1.8rem; color: var(--accent-rj-neon);">R$ 0,00 (0%)</strong>
+              </div>
+              <div style="background: rgba(255, 78, 80, 0.1); border: 1px solid var(--accent-rj-coral); padding: 1rem 1.5rem; border-radius: 12px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Pedidos Concluídos</span>
+                <strong style="font-size: 1.8rem; color: var(--accent-rj-gold);">64 Pedidos</strong>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">📱 Gestor de Pedidos em Tempo Real com impressão automática de comandas e envio de status via WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Planos & Calculadora de Faturamento -->
+  <section class="section" id="planos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Preços Justos no Rio de Janeiro</span>
+        <h2 class="section-title">Simule seu faturamento e veja quanto <span>você vai economizar</span></h2>
+        <p style="color: var(--text-muted);">
+          Deslize o faturamento mensal aproximado do seu delivery para ver o plano ideal. Todos incluem <strong>30 dias grátis</strong>, personalização do cardápio sem custos e suporte diário.
+        </p>
+      </div>
+
+      <!-- Calculadora Box -->
+      <div class="calc-container reveal">
+        <div class="calc-header">
+          <h3>Qual o faturamento mensal do seu negócio no RJ?</h3>
+          <div class="calc-faturamento-display" id="faturamento-val">R$ 20.000</div>
+        </div>
+
+        <div class="calc-slider-box">
+          <input type="range" id="faturamento-slider" class="range-slider" min="1000" max="50000" step="1000" value="20000" aria-label="Faturamento Mensal">
+          <div class="slider-labels">
+            <span>R$ 1.000</span>
+            <span>R$ 15.000</span>
+            <span>R$ 30.000</span>
+            <span>R$ 50.000+</span>
+          </div>
+        </div>
+
+        <div class="economy-callout" id="calc-economy-text">
+          Economia estimada de <strong>R$ 2.203/mês</strong> em comparação com taxas habituais de marketplace!
+        </div>
+
+        <div class="pricing-toggle-box">
+          <button class="pricing-toggle-btn active" id="toggle-mensal">Mensal</button>
+          <button class="pricing-toggle-btn" id="toggle-anual">Anual <span class="save-badge">20% OFF</span></button>
+        </div>
+
+        <!-- Grid de Cards dos Planos (TCG Glassmorphism) -->
+        <div class="plans-grid">
+          <!-- Plano Bronze -->
+          <div class="plan-card" id="plan-bronze">
+            <span class="plan-card-badge" style="background: linear-gradient(90deg, #94a3b8, #cbd5e1);">INICIANTE</span>
+            <h3 class="plan-name">Plano Bronze</h3>
+            <p class="plan-desc">Ideal para quem está começando o delivery próprio no RJ.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-bronze">147</span>
+              <span class="plan-period">/mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pedidos ilimitados (0% comissão)</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cardápio Digital com QR Code</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Integração WhatsApp Direto</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Suporte Humano RJ</li>
+            </ul>
+            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Escolher Plano</button>
+          </div>
+
+          <!-- Plano Prata (Recommended) -->
+          <div class="plan-card recommended" id="plan-prata">
+            <span class="plan-card-badge">O MAIS ESCOLHIDO NO RJ</span>
+            <h3 class="plan-name">Plano Prata</h3>
+            <p class="plan-desc">Perfeito para restaurantes estabelecidos com alto volume de vendas.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-prata">197</span>
+              <span class="plan-period">/mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tudo do Plano Bronze</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Montagem do Cardápio Grátis</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Taxa de Entrega por Bairro do RJ</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Impressão Automática de Comandas</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cupons de Desconto & Fidelidade</li>
+            </ul>
+            <button class="btn btn-primary btn-signup-open" style="width: 100%;">Escolher Plano Prata</button>
+          </div>
+
+          <!-- Plano Ouro -->
+          <div class="plan-card" id="plan-ouro">
+            <span class="plan-card-badge" style="background: linear-gradient(90deg, #eab308, #f59e0b);">PRO / MULTI-LOJAS</span>
+            <h3 class="plan-name">Plano Ouro</h3>
+            <p class="plan-desc">Para grandes operações, hamburguerias e pizzarias de alto faturamento.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-ouro">297</span>
+              <span class="plan-period">/mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tudo do Plano Prata</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Emissão NFC-e SEFAZ RJ</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Gestor de Mesas & Comanda Móvel</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Atendimento VIP prioritário</li>
+            </ul>
+            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Escolher Plano Ouro</button>
+          </div>
+
+          <!-- Plano VIP -->
+          <div class="plan-card" id="plan-vip">
+            <span class="plan-card-badge" style="background: linear-gradient(90deg, #9333ea, #c084fc); color: white;">SECRETO / EXCLUSIVO</span>
+            <h3 class="plan-name">Plano VIP</h3>
+            <p class="plan-desc">Para redes e franquias com múltiplas unidades no Rio de Janeiro.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-vip">497</span>
+              <span class="plan-period">/mês</span>
+            </div>
+            <ul class="plan-features">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-unidades / Multi-filiais</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> API personalizada & Relatórios BI</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Gerente de Conta Dedicado no RJ</li>
+            </ul>
+            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Falar com Consultor</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Live Interactive Smartphone Menu Simulator -->
+  <section class="section demo-section" id="demo">
+    <div class="container">
+      <div class="demo-wrapper">
+        <div class="demo-info reveal">
+          <span class="badge badge-rj">Simulador Interativo ao Vivo</span>
+          <h3>Veja como é fácil para o seu cliente pedir no <span>Menuvem.RJ</span></h3>
+          <p>
+            Experimente agora no celular ao lado! Adicione um item tradicional do Rio de Janeiro ao carrinho e simule o envio instantâneo do pedido.
+          </p>
+
+          <div class="demo-feature-list">
+            <div class="demo-feature-item">
+              <div class="demo-icon-box">⚡</div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--text-main);">Sem necessidade de baixar aplicativo</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">O cliente abre seu cardápio via link no Instagram, WhatsApp ou QR Code na mesa.</p>
+              </div>
+            </div>
+            <div class="demo-feature-item">
+              <div class="demo-icon-box">💬</div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--text-main);">Pedido pronto e formatado no seu WhatsApp</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Tudo chega detalhado com itens, observações, endereço de entrega e opção de pagamento via PIX.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup -->
+        <div class="reveal delay-200">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- Store Header -->
+              <div class="phone-store-header">
+                <div class="phone-store-avatar">RJ</div>
+                <div class="phone-store-info">
+                  <h4>Sabor Carioca Delivery</h4>
+                  <span>● Aberto agora • Entrega 30-45min</span>
+                </div>
+              </div>
+
+              <!-- Category Chips -->
+              <div class="phone-categories">
+                <div class="phone-cat-chip active" data-cat="lanches">🍔 Lanches Cariocas</div>
+                <div class="phone-cat-chip" data-cat="acai">🍨 Açaí & Doces</div>
+                <div class="phone-cat-chip" data-cat="pizzas">🍕 Pizzas</div>
+                <div class="phone-cat-chip" data-cat="bebidas">🥤 Bebidas</div>
+              </div>
+
+              <!-- Menu Items Container -->
+              <div class="phone-menu-items" id="phone-menu-items">
+                <!-- Dynamically populated by demo-menu.js -->
+              </div>
+
+              <!-- Cart Bar -->
+              <div class="phone-cart-bar">
+                <div class="phone-cart-info">
+                  <span id="cart-count">0 itens</span>
+                  <strong id="cart-total">R$ 0,00</strong>
+                </div>
+                <button class="btn btn-primary" id="btn-phone-checkout" style="padding: 0.5rem 0.9rem; font-size: 0.8rem;">
+                  Simular Pedido ➔
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: O Fator Local RJ & Recursos Regionalizados -->
+  <section class="section" id="fator-local">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-rj">O Diferencial Regional</span>
+        <h2 class="section-title">Por que os estabelecimentos do <span>Rio de Janeiro</span> escolhem o Menuvem.RJ?</h2>
+        <p style="color: var(--text-muted);">
+          Plataforma desenvolvida para atender às particularidades do mercado fluminense com agilidade e suporte de verdade.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h3>Suporte Humano RJ Todos os Dias</h3>
+          <p>Chega de robôs que não resolvem nada. Nossa equipe técnica atende o estado do Rio no WhatsApp em minutos, 7 dias por semana.</p>
+        </div>
+
+        <div class="feature-card reveal delay-100">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          </div>
+          <h3>Taxas por Bairro do RJ</h3>
+          <p>Configure taxas personalizadas por bairro (Copacabana, Tijuca, Niterói, Caxias, etc.) ou por raio de quilometragem no mapa.</p>
+        </div>
+
+        <div class="feature-card reveal delay-200">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3>Zero Comissão por Venda</h3>
+          <p>Diferente de iFood e Rappi que cobram até 27% do seu faturamento, no Menuvem.RJ todo o lucro das suas vendas permanece 100% no seu bolso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Depoimentos de Restaurantes do RJ -->
+  <section class="section" id="depoimentos" style="background: rgba(18, 22, 35, 0.4);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Casos de Sucesso no RJ</span>
+        <h2 class="section-title">Comerciantes que <span>transformaram suas vendas</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Reduzimos nossa dependência do iFood em 40% no primeiro mês. O cardápio digital do Menuvem.RJ é muito rápido e o suporte do WhatsApp responde na hora!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=100&q=80')"></div>
+            <div class="author-info">
+              <h4>Marcos & Luciana</h4>
+              <span>Hamburgueria Botafogo - Rio de Janeiro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-100">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Montaram todo o meu cardápio gratuitamente. Em Niterói, os clientes adoram a facilidade de pedir pelo link da bio do Instagram sem ter que baixar aplicativo."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=100&q=80')"></div>
+            <div class="author-info">
+              <h4>Chef Rodrigo Silva</h4>
+              <span>Bistrô Icaraí - Niterói</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-200">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"A impressão de comandas direto na cozinha economiza muito tempo nos finais de semana de pico na Baixada Fluminense. Recomendo de olhos fechados!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80')"></div>
+            <div class="author-info">
+              <h4>Fernando Gouveia</h4>
+              <span>Pizzaria Central - Duque de Caxias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Perguntas Frequentes (FAQ) -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">Tire suas dúvidas</span>
+        <h2 class="section-title">Perguntas Frequentes dos <span>Comerciantes do RJ</span></h2>
+      </div>
+
+      <div class="faq-container reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            Como funciona o bônus de 30 dias grátis no Rio de Janeiro?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Você faz o seu cadastro em nosso site, cria sua conta e entra em contato com nossa equipe de suporte RJ no WhatsApp. Nós aplicamos a promoção de 30 dias totalmente gratuitos, montamos seu cardápio e você só paga a mensalidade se gostar do resultado!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Tem alguma taxa de comissão sobre os pedidos?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Zero! Não cobramos nenhuma taxa de comissão por pedido. Você paga apenas o valor fixo da mensalidade do seu plano e todo o faturamento das suas vendas é 100% seu.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Vocês realmente montam o meu cardápio de graça?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Sim! Para estabelecimentos no estado do Rio de Janeiro, nossa equipe cadastra seus produtos, fotos, descrições e adicionais sem nenhum custo adicional.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Funciona em quais cidades do Estado do Rio de Janeiro?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Em absolutamente todo o estado! Atendemos a Capital (Zona Sul, Norte, Oeste, Centro, Barra), Niterói, São Gonçalo, Baixada Fluminense (Caxias, Nova Iguaçu, Nilópolis), Região dos Lagos (Cabo Frio, Búzios, Arraial) e Região Serrana.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <footer style="background: #05070a; border-top: 1px solid var(--border-light); padding: 4rem 0 2rem 0;">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Pronto para transformar as vendas do seu restaurante no RJ?</h2>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
+        Experimente a plataforma de cardápio digital mais rápida e completa do Rio de Janeiro por 30 dias sem compromisso.
+      </p>
+
+      <button class="btn btn-primary btn-signup-open" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
+        Começar 30 Dias Grátis Agora ➔
+      </button>
+
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-subtle); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          © 2026 <strong>Menuvem.RJ</strong> - Representação Oficial no Estado do Rio de Janeiro.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#planos">Planos</a>
+          <a href="#fator-local">Fator Local</a>
+          <a href="https://painel.menuvem.com.br" target="_blank">Painel Administrativo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5521999998888?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Menuvem.RJ%20e%20quero%20minha%20demonstra%C3%A7%C3%A3o%20gr%C3%A1tis!"
+    target="_blank" class="whatsapp-float" aria-label="Suporte WhatsApp RJ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.727-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.588 2.022 14.12 1 11.66 1c-5.456 0-9.9 4.398-9.905 9.829-.001 1.765.485 3.488 1.408 5.093l-.999 3.648 3.843-.984zm11.23-6.842c-.303-.151-1.793-.884-2.071-.985-.278-.101-.48-.151-.681.151-.202.303-.781.985-.957 1.186-.177.202-.353.227-.656.075-.303-.151-1.28-.472-2.438-1.503-.9-.8-1.507-1.787-1.684-2.09-.177-.302-.018-.465.133-.614.136-.134.303-.353.454-.528.152-.177.202-.303.303-.505.101-.202.051-.378-.025-.528-.076-.151-.681-1.641-.933-2.246-.247-.591-.497-.512-.681-.512-.177-.008-.379-.008-.581-.008-.202 0-.531.075-.809.378-.278.302-1.061 1.037-1.061 2.531 0 1.493 1.087 2.936 1.238 3.138.152.202 2.138 3.262 5.177 4.57.722.311 1.286.497 1.726.637.725.23 1.385.197 1.906.12.581-.087 1.793-.73 2.046-1.437.252-.705.252-1.31.177-1.437-.076-.127-.278-.202-.581-.353z" />
+    </svg>
+  </a>
+
+  <!-- Registration Modal -->
+  <div class="modal-overlay" id="signup-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar Modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge badge-rj">Bônus Exclusivo RJ</span>
+        <h3 style="font-size: 1.6rem; margin-top: 0.5rem;">Cadastre sua Loja no RJ</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Garanta 30 dias grátis + montagem de cardápio inclusa</p>
+      </div>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="input-store-name">Nome do Restaurante / Estabelecimento *</label>
+          <input type="text" id="input-store-name" class="form-control" placeholder="Ex: Sabor Carioca Burgers" required>
+        </div>
+
+        <div class="form-group">
+          <label for="input-city">Cidade / Bairro no Rio de Janeiro *</label>
+          <input type="text" id="input-city" class="form-control" placeholder="Ex: Copacabana, Niterói, Caxias" required>
+        </div>
+
+        <div class="form-group">
+          <label for="input-whatsapp">Seu WhatsApp de Contato *</label>
+          <input type="tel" id="input-whatsapp" class="form-control" placeholder="(21) 99999-8888" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Ativar Meus 30 Dias Grátis ➔
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/calculator.js"></script>
+  <script src="./js/demo-menu.js"></script>
+</body>
+
+</html>

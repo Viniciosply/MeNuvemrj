@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="gradLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="100%" stop-color="#3a7bd5" />
+    </linearGradient>
+    <linearGradient id="gradGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4e50" />
+      <stop offset="100%" stop-color="#f9d423" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cloud / Smartphone Icon -->
+  <g transform="translate(5, 10)">
+    <rect x="0" y="5" width="28" height="34" rx="6" fill="url(#gradLogo)" />
+    <circle cx="14" cy="34" r="2" fill="#ffffff" />
+    <path d="M 8 16 Q 14 10 20 16 Q 25 18 24 23 Q 23 27 18 27 L 8 27 Q 4 25 5 21 Q 5 17 8 16 Z" fill="#ffffff" opacity="0.9" />
+  </g>
+
+  <!-- Text -->
+  <text x="42" y="36" font-family="'Outfit', 'Helvetica', sans-serif" font-weight="800" font-size="24" fill="#ffffff">
+    Menuvem<tspan fill="#00d2ff">.</tspan><tspan fill="url(#gradGlow)">RJ</tspan>
+  </text>
+</svg>

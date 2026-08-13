@@ -1,0 +1,256 @@
+/* ==========================================================================
+   CALCULATOR & PRICING PLANS STYLES - MENU VEM RJ
+   ========================================================================== */
+
+.plans-section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+/* Calculadora Container Box */
+.calc-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.calc-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.calc-faturamento-display {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: rgba(0, 119, 255, 0.1);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--border-radius-pill);
+  border: 1px solid rgba(0, 119, 255, 0.3);
+}
+
+/* Range Slider Styling */
+.calc-slider-box {
+  margin-bottom: 2.5rem;
+}
+
+.range-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #1F2937;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--primary-glow);
+  border: 2px solid #FFFFFF;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Comparador de Economia Widget */
+.savings-comparison-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.savings-card {
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+
+.savings-card.ifood {
+  background: rgba(255, 94, 98, 0.06);
+  border: 1px solid rgba(255, 94, 98, 0.2);
+}
+
+.savings-card.menuvem {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.savings-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.savings-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.savings-card.ifood .savings-value {
+  color: #FF5E62;
+}
+
+.savings-card.menuvem .savings-value {
+  color: #10B981;
+}
+
+.savings-highlight {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  background: rgba(255, 184, 0, 0.08);
+  padding: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px dashed rgba(255, 184, 0, 0.3);
+}
+
+/* Grid de Planos */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2.25rem 1.75rem;
+  position: relative;
+  transition: all var(--transition-bounce);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 119, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 119, 255, 0.15);
+}
+
+.plan-card.featured {
+  background: linear-gradient(180deg, rgba(0, 119, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: var(--primary);
+  box-shadow: 0 0 35px rgba(0, 119, 255, 0.2);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--border-radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.plan-badge-retro {
+  font-family: var(--font-retro);
+  font-size: 0.55rem;
+  background: linear-gradient(90deg, #9333ea, #eab308);
+}
+
+.plan-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-price-box {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.plan-currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.plan-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.plan-period {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.plan-features li svg {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .calc-container {
+    padding: 1.5rem;
+  }
+  .savings-comparison-box {
+    grid-template-columns: 1fr;
+  }
+}
