@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore as funcionalidades do Menuvem PB. Soluções completas como QR Code na mesa, delivery sem comissão, automação no WhatsApp e integração com PDV.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://menuvempb.com.br/funcionalidades.html">
+    <meta property="og:title" content="Funcionalidades | Menuvem PB">
+    <meta property="og:description" content="Explore as funcionalidades do Menuvem PB. Soluções completas como QR Code na mesa, delivery sem comissão e muito mais.">
+    <meta property="og:image" content="https://menuvempb.com.br/img/menuvem-logo-simples.png">
+
+    <link rel="icon" type="image/png" href="img/menuvem-logo-simples.png">
+    <title>[Funcionalidades] Recursos e Módulos | Menuvem PB</title>
+    <link rel="stylesheet" href="css/style.css?v=2">
+
+    <link rel="stylesheet" href="css/funcionalidades.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMFHH39Q0N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WMFHH39Q0N');
+    </script>
+</head>
+
+<body>
+    <!-- Navbar (Simplified for this page) -->
+    <nav class="navbar" style="background: rgba(2, 2, 4, 0.95);">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/menuvem-logo-simples.png" alt="Logo" height="24" style="margin-right: 4px;">
+                <span class="logo-text" style="display:flex; align-items:center;">Menuvem<span class="logo-dot">.</span>PB<img src="img/bandeiradaparaiba.png" alt="Bandeira PB" height="18" style="margin-left: 8px; border-radius:2px; box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);"></span>
+            </a>
+            <a href="index.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Voltar ao Início
+            </a>
+        </div>
+    </nav>
+
+    <button class="mobile-menu-toggle" id="mobileToggle">
+        <span>Selecione uma Funcionalidade</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="func-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="func-sidebar" id="funcSidebar">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+                <h3 style="font-family: var(--font-title); font-size: 1.2rem;">Módulos</h3>
+                <button id="closeSidebar" style="background:none; border:none; color:white; font-size:1.5rem; display:none; cursor:pointer;">&times;</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container" style="margin-bottom: 1.5rem;">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="funcSearchInput" class="search-input" placeholder="Pesquisar módulo...">
+                <svg class="clear-icon" id="clearSearchBtn" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+            <div id="noResults" class="no-results" style="display:none; font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-muted);">Nenhuma funcionalidade encontrada.</div>
+
+            <!-- Category 1 -->
+            <div class="category-group open">
+                <div class="category-title">
+                    Delivery & Cardápio
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><path d="M6 9l6 6 6-6"></path></svg>
+                </div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item active" data-target="delivery-proprio">Painel de Delivery</li>
+                    <li class="subcategory-item" data-target="gestao-de-cardapio">Gestão de Cardápio</li>
+                    <li class="subcategory-item" data-target="fidelidade">Fidelidade & Cupons</li>
+                    <li class="subcategory-item" data-target="automacao-whatsapp">Automação no WhatsApp</li>
+                    <li class="subcategory-item" data-target="integracao-ifood">Integração iFood, Keeta & Aiqfome</li>
+                    <li class="subcategory-item" data-target="pagamento-online">Pagamento Online Integrado</li>
+                </ul>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-group">
+                <div class="category-title">
+                    Frente de Caixa (PDV)
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><path d="M6 9l6 6 6-6"></path></svg>
+                </div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item" data-target="pdv-agil">PDV Ágil (Balcão)</li>
+                    <li class="subcategory-item" data-target="mesas">Controle de Mesas e Comandas</li>
+                    <li class="subcategory-item" data-target="kds">Gestão de Setores de Produção</li>
+                    <li class="subcategory-item" data-target="cardapio-qr">Cardápio QR Code na Mesa</li>
+                </ul>
+            </div>
+            
+            <!-- Category 3 -->
+            <div class="category-group">
+                <div class="category-title">
+                    Controle de Estoque
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><path d="M6 9l6 6 6-6"></path></svg>
+                </div>
+                <ul class="subcategory-list">
+                    
+                    <li class="subcategory-item" data-target="estoque-minimo">Alerta de Estoque Mínimo</li>
+                    <li class="subcategory-item" data-target="inventario">Relatórios de Inventário</li>
+                </ul>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category-group">
+                <div class="category-title">
+                    Financeiro & Fiscal
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><path d="M6 9l6 6 6-6"></path></svg>
+                </div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item" data-target="emissao-fiscal">Emissão NFC-e Automática</li>
+                    <li class="subcategory-item" data-target="fechamento-caixa">Fechamento de Caixa Cego</li>
+                    <li class="subcategory-item" data-target="dre">Relatórios de DRE e Vendas</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="func-main" id="funcMain">
+            <!-- Content 1 -->
+            <div class="func-detail active" id="delivery-proprio">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Painel de Delivery</h1>
+                <p>Tenha o seu próprio cardápio digital profissional, totalmente livre de taxas e comissões abusivas por pedido. Você vende mais e o lucro fica 100% no seu caixa.</p>
+                <ul class="func-feature-list">
+                    <li>Link exclusivo com o nome do seu negócio (ex: seunome.pedir.online).</li>
+                    <li>Cardápio intuitivo otimizado para aumentar a conversão no celular.</li>
+                    <li>Atualização de preços, pausas de itens e promoções em tempo real.</li>
+                    <li>Notificações automáticas no WhatsApp do cliente sobre o status do pedido.</li>
+                </ul>
+            </div>
+
+            <!-- Content 2: Gestão de Cardápio -->
+            <div class="func-detail" id="gestao-de-cardapio">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Gestão de Cardápio</h1>
+                <p>Gerencie seu cardápio com agilidade, controle em tempo real e integração inteligente de produtos, combos e estoque.</p>
+                <ul class="func-feature-list">
+                    <li><strong>Ativação e Desativação Instantânea:</strong> Ligue ou desligue produtos do cardápio a qualquer momento com resposta imediata para os clientes no site.</li>
+                    <li><strong>Criação Flexível de Produtos e Combos:</strong> Crie itens personalizados reutilizando sabores, adicionais e complementos cadastrados sem precisar recriar tudo do zero.</li>
+                    <li><strong>Estoque Interligado em Múltiplos Produtos:</strong> Vincule insumos e bebidas (como Coca-Cola Lata 350ml) ao estoque único. A venda de um combo baixa automaticamente a bebida individual do estoque central.</li>
+                    <li><strong>Sincronização e Pausa Automática:</strong> Se um produto for pausado manualmente ou o estoque zerar, ele é desativado instantaneamente de todas as promoções, ofertas e combos onde estiver presente.</li>
+                </ul>
+            </div>
+
+            <div class="func-detail" id="fidelidade">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Fidelidade & Cupons</h1>
+                <p>Engaje seus clientes e aumente a frequência de pedidos com nosso programa de pontos flexível e cupons promocionais altamente configuráveis.</p>
+                <ul class="func-feature-list">
+                    <li><strong>Programa de Pontos & Recompensas:</strong> O cliente ganha 1 ponto a cada R$ 1,00 gasto. O lojista transforma produtos existentes do cardápio em recompensas, podendo definir manualmente os pontos necessários ou usar o cálculo automático de 5% de retorno (ex: R$ 15,00 = 300 pontos).</li>
+                </ul>
+            </div>
+
+            <div class="func-detail" id="automacao-whatsapp">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Automação no WhatsApp</h1>
+                <p>A Menuvem disponibiliza diferentes métodos de automação para que o lojista escolha a opção mais alinhada à sua operação e orçamento.</p>
+                <ul class="func-feature-list">
+                    <li><strong>API Oficial da META (Recomendado):</strong> Somos parceiros oficiais da META. Oferece a melhor experiência, máxima estabilidade, segurança e zero risco de bloqueios. <em>(Sujeito às taxas de conversa da própria META).</em></li>
+                    <li><strong>Integração Z-API (Terceiros):</strong> Conexão via Z-API com investimento aproximado de R$ 100,00/mês. <em>(Nota: A Menuvem disponibiliza a integração técnica, mas não se responsabiliza por plataformas de terceiros).</em></li>
+                    <li><strong>Chatplug (Desenvolvido por NUC Tecnologia / Menuvem):</strong> Aplicação gratuita desenvolvida pela nossa equipe para automação de Chatbot no WhatsApp. Sem mensalidade, mas requer que a máquina/computador do cliente esteja ligada e conectada à internet. Por não ser API Oficial, está sujeita a instabilidades operacionais e pode solicitar reconexão via QR Code.</li>
+                </ul>
+            </div>
+            
+            <div class="func-detail" id="integracao-ifood">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Integração iFood, Keeta & Aiqfome</h1>
+                <p>Centralize a gestão de todos os seus pedidos de aplicativos parceiros (iFood, Keeta e Aiqfome) em uma única tela no seu sistema.</p>
+                <ul class="func-feature-list">
+                    <li><strong>Gestão Centralizada de Pedidos:</strong> Pedidos do iFood, Keeta e Aiqfome caem diretamente no PDV Menuvem para aceite e acompanhamento de entrega.</li>
+                    <li><strong>Impressão Automática de Comandas:</strong> Envio automático dos pedidos para impressão nas impressoras da cozinha por setor de produção.</li>
+                    <li><strong>Importante (Gestão Exclusiva de Pedidos):</strong> As integrações com iFood, Keeta e Aiqfome destinam-se exclusivamente à gestão e recepção de pedidos no PDV. O sistema não realiza a sincronização de cardápios ou alteração automática de preços nos aplicativos de terceiros.</li>
+                </ul>
+            </div>
+
+            <!-- Content: Pagamento Online Integrado -->
+            <div class="func-detail" id="pagamento-online">
+                <span class="badge" style="background:rgba(217,70,239,0.1); border-color:rgba(217,70,239,0.2); color:#f472b6;">Cardápio & Delivery</span>
+                <h1>Pagamento Online Integrado</h1>
+                <p>Receba pagamentos com total praticidade e segurança direto no cardápio digital, com aprovação em tempo real e antifraude integrado.</p>
+                
+                <!-- Método 1: PIX Dinâmico -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <h3 style="font-size: 1.25rem; color: #34d399; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                            ⚡ PIX Dinâmico (Conciliação Automática)
+                        </h3>
+                        <span style="background: rgba(52, 211, 153, 0.15); border: 1px solid rgba(52, 211, 153, 0.3); color: #34d399; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Aprovação Instantânea</span>
+                    </div>
+                    <p style="color: #e4e4e7; margin-bottom: 1rem; line-height: 1.5;">
+                        Com esse serviço, o pedido <strong>só chegará para você quando o valor for conferido de forma automática e garantido como PAGO pelo banco</strong>. Chega de comprovantes falsos ou dores de cabeça! Se precisar de suporte, nossa equipe está pronta para te atender.
+                    </p>
+                    <ul class="func-feature-list" style="margin-bottom: 1rem;">
+                        <li><strong>Taxa por Pedido Pago:</strong> Apenas <strong>R$ 0,59</strong> (taxa bancária) por pedido aprovado via cardápio.</li>
+                        <li><strong>Saque a Qualquer Momento:</strong> O valor fica disponível para saque a qualquer momento sem prazo mínimo! Cada solicitação de saque (de quantia ilimitada) custa apenas <strong>R$ 0,30</strong> (taxa bancária). Você acumula o valor que desejar e saca quando quiser.</li>
+                        <li><strong>Painel AvantePay Exclusivo:</strong> Você recebe acesso ao painel AvantePay para gerenciar todas as transações, efetuar saques e realizar cancelamentos (cancelamentos possuem taxa bancária de R$ 0,30).</li>
+                        <li><strong>Aviso Importante sobre Cancelamentos:</strong> Cancelar o pedido no Painel de Pedidos da Menuvem <em>não estorna o valor automaticamente ao cliente</em>. Para efetuar o estorno bancário, basta realizar o procedimento no Painel AvantePay (nossa equipe de Suporte pode te auxiliar sempre que precisar).</li>
+                    </ul>
+                    <div style="background: rgba(234, 179, 8, 0.1); border-left: 4px solid #eab308; padding: 0.75rem 1rem; border-radius: 4px; font-size: 0.85rem; color: #fef08a; margin-top: 1rem;">
+                        ⚠️ <strong>Requisito de Ativação:</strong> Função disponível <strong>APENAS para Contas Bancárias de Pessoa Jurídica (PJ)</strong>. O prazo de cadastro e ativação é de até 7 dias úteis após o envio dos documentos necessários.
+                    </div>
+                    
+                    <!-- Destaque Segurança Matera -->
+                    <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🛡️</span>
+                        <div>
+                            <strong style="color: #ffffff; font-size: 0.9rem;">Parceiro de Infraestrutura: Matera</strong>
+                            <p style="font-size: 0.82rem; color: #a1a1aa; margin-top: 0.25rem; line-height: 1.4;">
+                                O PIX Dinâmico é operado em parceria com a <strong>Matera</strong>, líder nacional em tecnologia de infraestrutura bancária que processa bilhões de reais diariamente com segurança nível bancário, criptografia ponta a ponta e integração oficial ao Banco Central.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Método 2: Crédito Online -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+                        <h3 style="font-size: 1.25rem; color: #60a5fa; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                            💳 Crédito Online (Cartão de Crédito)
+                        </h3>
+                        <span style="background: rgba(96, 165, 250, 0.15); border: 1px solid rgba(96, 165, 250, 0.3); color: #60a5fa; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Proteção Antifraude</span>
+                    </div>
+                    <p style="color: #e4e4e7; margin-bottom: 1rem; line-height: 1.5;">
+                        Permita que seus clientes paguem diretamente pelo cartão de crédito no site com máxima conversão e total segurança contra fraudes.
+                    </p>
+                    <ul class="func-feature-list" style="margin-bottom: 1rem;">
+                        <li><strong>Crédito em 30 dias:</strong> Taxa de <strong>3,3% + R$ 0,27</strong> por transação (inclui proteção antifraude).</li>
+                        <li><strong>Crédito em 2 dias úteis:</strong> Taxa de <strong>4,8% + R$ 0,27</strong> por transação (inclui proteção antifraude) — <em>sujeito a aprovação prévia</em>.</li>
+                    </ul>
+                    
+                    <!-- Destaque Segurança Braspag -->
+                    <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🔒</span>
+                        <div>
+                            <strong style="color: #ffffff; font-size: 0.9rem;">Parceiro de Processamento: Braspag (Grupo Cielo)</strong>
+                            <p style="font-size: 0.82rem; color: #a1a1aa; margin-top: 0.25rem; line-height: 1.4;">
+                                O processamento de crédito online é realizado via <strong>Braspag</strong>, a maior gateway de pagamentos da América Latina e pertencente ao grupo <strong>Cielo</strong>. Conta com certificação máxima de segurança internacional PCI-DSS e inteligência antifraude em tempo real.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="func-detail" id="pdv-agil">
+                <span class="badge" style="background:rgba(100, 29, 222, 0.1); border-color:rgba(100, 29, 222, 0.2); color:#a78bfa;">Frente de Caixa (PDV)</span>
+                <h1>PDV Ágil (Balcão)</h1>
+                <p>Um sistema de vendas ultrarrápido projetado para não gerar filas. Faça pedidos com 3 cliques.</p>
+                <ul class="func-feature-list">
+                    <li>Busca rápida de produtos por código, nome ou categoria.</li>
+                    <li>Fechamento rápido em dinheiro, PIX integrado ou cartão.</li>
+                    <li>Integração total com balanças e gavetas de dinheiro.</li>
+                </ul>
+            </div>
+
+            <div class="func-detail" id="mesas">
+                <span class="badge" style="background:rgba(100, 29, 222, 0.1); border-color:rgba(100, 29, 222, 0.2); color:#a78bfa;">Frente de Caixa (PDV)</span>
+                <h1>Controle de Mesas e Comandas</h1>
+                <p>Elimine o papel e evite erros no salão. Acompanhe o consumo de cada cliente em tempo real.</p>
+                <ul class="func-feature-list">
+                    <li>Mapa visual do salão com status de tempo de mesa.</li>
+                    <li>Divisão de conta exata entre os clientes da mesa.</li>
+                    <li>Transferência de itens entre comandas de forma simplificada.</li>
+                </ul>
+            </div>
+            
+            <div class="func-detail" id="emissao-fiscal">
+                <span class="badge" style="background:rgba(59,130,246,0.1); border-color:rgba(59,130,246,0.2); color:#60a5fa;">Financeiro & Fiscal</span>
+                <h1>Emissão NFC-e & NF-e Automática</h1>
+                <p>Emita notas fiscais do consumidor (NFC-e) e notas fiscais eletrônicas (NF-e) diretamente pelo sistema com integração oficial na SEFAZ.</p>
+                <ul class="func-feature-list">
+                    <li><strong>Suporte a NFC-e e NF-e:</strong> Emissão ágil e simplificada no momento da venda ou no fechamento do pedido.</li>
+                    <li><strong>Plano 1 (Iniciante):</strong> Limite de 400 notas mensais inclusas sem custo (+ R$ 0,05 por nota extra sem precisar mudar de plano).</li>
+                    <li><strong>Plano 2 (O Mais Escolhido):</strong> Limite de 800 notas mensais inclusas (+ R$ 0,05 por nota extra sem precisar mudar de plano).</li>
+                    <li><strong>Plano 3 (Negócios Consolidados):</strong> <span style="color:#f59e0b; font-weight:700; background:rgba(245, 158, 11, 0.15); padding:2px 8px; border-radius:4px; border:1px solid rgba(245, 158, 11, 0.3); font-size:0.85rem;">EMISSÃO ILIMITADA ✨</span> (sem qualquer limite de notas mensais).</li>
+                </ul>
+            </div>
+
+            <!-- Default fallback for others -->
+            <div class="func-detail" id="default-info">
+                <span class="badge">Funcionalidade</span>
+                <h1>Mais detalhes</h1>
+                <p>Esta funcionalidade ajuda você a operar de forma mais ágil, garantindo que o tempo gasto seja investido na estratégia do seu negócio.</p>
+                <ul class="func-feature-list">
+                    <li>Fácil implementação e uso imediato.</li>
+                    <li>Sincronizado automaticamente com os demais módulos.</li>
+                    <li>Acesso remoto de qualquer lugar pelo celular do gestor.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categories = document.querySelectorAll('.category-title');
+            const items = document.querySelectorAll('.subcategory-item');
+            const details = document.querySelectorAll('.func-detail');
+            const mobileToggle = document.getElementById('mobileToggle');
+            const sidebar = document.getElementById('funcSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const closeSidebar = document.getElementById('closeSidebar');
+
+            // Open/Close Categories
+            categories.forEach(cat => {
+                cat.addEventListener('click', () => {
+                    cat.parentElement.classList.toggle('open');
+                });
+            });
+
+            // Select item logic
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Update active state in menu
+                    items.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+
+                    // Show corresponding detail
+                    const targetId = item.getAttribute('data-target');
+                    let found = false;
+                    
+                    details.forEach(detail => {
+                        detail.classList.remove('active');
+                        if(detail.id === targetId) {
+                            detail.classList.add('active');
+                            found = true;
+                        }
+                    });
+
+                    // fallback if content not filled yet
+                    if(!found) {
+                        const def = document.getElementById('default-info');
+                        def.classList.add('active');
+                        def.querySelector('h1').textContent = item.textContent;
+                    }
+
+                    // Update mobile toggle text
+                    mobileToggle.querySelector('span').textContent = item.textContent;
+
+                    // Close mobile sidebar
+                    if(window.innerWidth <= 992) {
+                        sidebar.classList.remove('open');
+                        overlay.classList.remove('active');
+                    }
+                });
+            });
+
+            // Mobile sidebar toggles
+            mobileToggle.addEventListener('click', () => {
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
+                closeSidebar.style.display = 'block';
+            });
+
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+
+            closeSidebar.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+
+            // Search Functionality
+            const searchInput = document.getElementById('funcSearchInput');
+            const clearSearchBtn = document.getElementById('clearSearchBtn');
+            const noResults = document.getElementById('noResults');
+            
+            function filterFuncs() {
+                const term = searchInput.value.toLowerCase().trim();
+                let hasVisibleItems = false;
+                
+                if (term.length > 0) {
+                    clearSearchBtn.style.display = 'block';
+                } else {
+                    clearSearchBtn.style.display = 'none';
+                }
+
+                categories.forEach(cat => {
+                    const group = cat.closest('.category-group');
+                    const itemsInGroup = group.querySelectorAll('.subcategory-item');
+                    let groupHasVisibleItems = false;
+
+                    itemsInGroup.forEach(item => {
+                        const targetId = item.getAttribute('data-target');
+                        const detailElement = document.getElementById(targetId);
+                        
+                        let matchText = item.textContent.toLowerCase();
+                        if (detailElement) {
+                            matchText += ' ' + detailElement.textContent.toLowerCase();
+                        }
+                        
+                        if (matchText.includes(term)) {
+                            item.style.display = 'block';
+                            groupHasVisibleItems = true;
+                            hasVisibleItems = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    if (groupHasVisibleItems) {
+                        group.style.display = 'block';
+                        if (term.length > 0) {
+                            group.classList.add('open');
+                        }
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+                
+                if (!hasVisibleItems && term.length > 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+            
+            if(searchInput) {
+                searchInput.addEventListener('input', filterFuncs);
+                
+                clearSearchBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    filterFuncs();
+                    searchInput.focus();
+                });
+            }
+
+            // Check URL hash on load
+            if(window.location.hash) {
+                let targetId = window.location.hash.substring(1); // remove '#'
+                if (targetId === 'delivery-proprio-taxa-r-0') targetId = 'delivery-proprio';
+                if (targetId === 'qr-code-na-mesa-balcao') targetId = 'cardapio-qr';
+                if (targetId === 'fidelidade-cupons') targetId = 'fidelidade';
+                if (targetId === 'automacao-no-whatsapp') targetId = 'automacao-whatsapp';
+                const targetItem = document.querySelector(`.subcategory-item[data-target="${targetId}"]`);
+                if(targetItem) {
+                    targetItem.click();
+                    // Ensure parent is open
+                    targetItem.closest('.category-group').classList.add('open');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
