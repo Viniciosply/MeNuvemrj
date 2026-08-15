@@ -118,23 +118,7 @@
       <!-- Dashboard Mockup Showcase Frame -->
       <div class="hero-visual-wrapper reveal delay-400">
         <div class="hero-mockup-inner">
-          <div style="text-align: center; padding: 2rem;">
-            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-              <div style="background: rgba(0, 210, 255, 0.1); border: 1px solid var(--primary); padding: 1rem 1.5rem; border-radius: 12px;">
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Vendas Hoje (RJ)</span>
-                <strong style="font-size: 1.8rem; color: var(--primary);">R$ 3.840,00</strong>
-              </div>
-              <div style="background: rgba(0, 230, 118, 0.1); border: 1px solid var(--accent-rj-neon); padding: 1rem 1.5rem; border-radius: 12px;">
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Comissão Paga ao iFood</span>
-                <strong style="font-size: 1.8rem; color: var(--accent-rj-neon);">R$ 0,00 (0%)</strong>
-              </div>
-              <div style="background: rgba(255, 78, 80, 0.1); border: 1px solid var(--accent-rj-coral); padding: 1rem 1.5rem; border-radius: 12px;">
-                <span style="font-size: 0.8rem; color: var(--text-muted); display: block;">Pedidos Concluídos</span>
-                <strong style="font-size: 1.8rem; color: var(--accent-rj-gold);">64 Pedidos</strong>
-              </div>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">📱 Gestor de Pedidos em Tempo Real com impressão automática de comandas e envio de status via WhatsApp</p>
-          </div>
+          <img src="./img/hero-mockup.png" alt="Painel Gestor de Pedidos Menuvem.RJ" class="hero-mockup-img" id="hero-mockup-img">
         </div>
       </div>
     </div>
@@ -177,83 +161,104 @@
           <button class="pricing-toggle-btn" id="toggle-anual">Anual <span class="save-badge">20% OFF</span></button>
         </div>
 
-        <!-- Grid de Cards dos Planos (TCG Glassmorphism) -->
-        <div class="plans-grid">
-          <!-- Plano Bronze -->
-          <div class="plan-card" id="plan-bronze">
-            <span class="plan-card-badge" style="background: linear-gradient(90deg, #94a3b8, #cbd5e1);">INICIANTE</span>
-            <h3 class="plan-name">Plano Bronze</h3>
-            <p class="plan-desc">Ideal para quem está começando o delivery próprio no RJ.</p>
-            <div class="plan-price-box">
-              <span class="plan-currency">R$</span>
-              <span class="plan-price" id="price-bronze">147</span>
-              <span class="plan-period">/mês</span>
+        <!-- Grid de Planos TCG Retro (Menuvem Official Style) -->
+        <div class="tcg-carousel-container">
+          <div class="tcg-carousel-track">
+            <!-- Plano 0 Secreto -->
+            <div class="tcg-card" id="plan-secreto">
+              <img src="./img/card-plano-0.png" class="tcg-background" alt="Carta Plano 0 Secreto">
+              <div class="tcg-badge">SECRETO</div>
+              <div class="tcg-content">
+                <div class="tcg-price-box">
+                  <span class="tcg-currency">R$</span>
+                  <span class="tcg-price" id="price-secreto">100</span>
+                  <span class="tcg-month">/mês</span>
+                </div>
+                <button class="retro-btn btn-signup-open">ESCOLHER PLANO</button>
+              </div>
             </div>
-            <ul class="plan-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pedidos ilimitados (0% comissão)</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cardápio Digital com QR Code</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Integração WhatsApp Direto</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Suporte Humano RJ</li>
-            </ul>
-            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Escolher Plano</button>
-          </div>
 
-          <!-- Plano Prata (Recommended) -->
-          <div class="plan-card recommended" id="plan-prata">
-            <span class="plan-card-badge">O MAIS ESCOLHIDO NO RJ</span>
-            <h3 class="plan-name">Plano Prata</h3>
-            <p class="plan-desc">Perfeito para restaurantes estabelecidos com alto volume de vendas.</p>
-            <div class="plan-price-box">
-              <span class="plan-currency">R$</span>
-              <span class="plan-price" id="price-prata">197</span>
-              <span class="plan-period">/mês</span>
+            <!-- Plano 1 Iniciante -->
+            <div class="tcg-card" id="plan-bronze">
+              <img src="./img/card-plano-1.png" class="tcg-background" alt="Carta Plano 1 Iniciante">
+              <div class="tcg-badge">INICIANTE</div>
+              <div class="tcg-content">
+                <div class="tcg-price-box">
+                  <span class="tcg-currency">R$</span>
+                  <span class="tcg-price" id="price-bronze">167</span>
+                  <span class="tcg-month">/mês</span>
+                </div>
+                <button class="retro-btn btn-signup-open">ESCOLHER PLANO</button>
+              </div>
             </div>
-            <ul class="plan-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tudo do Plano Bronze</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Montagem do Cardápio Grátis</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Taxa de Entrega por Bairro do RJ</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Impressão Automática de Comandas</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cupons de Desconto & Fidelidade</li>
-            </ul>
-            <button class="btn btn-primary btn-signup-open" style="width: 100%;">Escolher Plano Prata</button>
-          </div>
 
-          <!-- Plano Ouro -->
-          <div class="plan-card" id="plan-ouro">
-            <span class="plan-card-badge" style="background: linear-gradient(90deg, #eab308, #f59e0b);">PRO / MULTI-LOJAS</span>
-            <h3 class="plan-name">Plano Ouro</h3>
-            <p class="plan-desc">Para grandes operações, hamburguerias e pizzarias de alto faturamento.</p>
-            <div class="plan-price-box">
-              <span class="plan-currency">R$</span>
-              <span class="plan-price" id="price-ouro">297</span>
-              <span class="plan-period">/mês</span>
+            <!-- Plano 2 O Mais Escolhido -->
+            <div class="tcg-card recommended" id="plan-prata">
+              <img src="./img/card-plano-2.png" class="tcg-background" alt="Carta Plano 2 Mais Escolhido">
+              <div class="tcg-badge">O MAIS ESCOLHIDO</div>
+              <div class="tcg-content">
+                <div class="tcg-price-box">
+                  <span class="tcg-currency">R$</span>
+                  <span class="tcg-price" id="price-prata">227</span>
+                  <span class="tcg-month">/mês</span>
+                </div>
+                <button class="retro-btn btn-signup-open">ESCOLHER PLANO</button>
+              </div>
             </div>
-            <ul class="plan-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tudo do Plano Prata</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Emissão NFC-e SEFAZ RJ</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Gestor de Mesas & Comanda Móvel</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Atendimento VIP prioritário</li>
-            </ul>
-            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Escolher Plano Ouro</button>
-          </div>
 
-          <!-- Plano VIP -->
-          <div class="plan-card" id="plan-vip">
-            <span class="plan-card-badge" style="background: linear-gradient(90deg, #9333ea, #c084fc); color: white;">SECRETO / EXCLUSIVO</span>
-            <h3 class="plan-name">Plano VIP</h3>
-            <p class="plan-desc">Para redes e franquias com múltiplas unidades no Rio de Janeiro.</p>
-            <div class="plan-price-box">
-              <span class="plan-currency">R$</span>
-              <span class="plan-price" id="price-vip">497</span>
-              <span class="plan-period">/mês</span>
+            <!-- Plano 3 Profissional -->
+            <div class="tcg-card" id="plan-ouro">
+              <img src="./img/card-plano-3.png" class="tcg-background" alt="Carta Plano 3 Profissional">
+              <div class="tcg-badge" style="background: linear-gradient(90deg, #eab308, #f59e0b);">PROFISSIONAL</div>
+              <div class="tcg-content">
+                <div class="tcg-price-box">
+                  <span class="tcg-currency">R$</span>
+                  <span class="tcg-price" id="price-ouro">267</span>
+                  <span class="tcg-month">/mês</span>
+                </div>
+                <button class="retro-btn btn-signup-open">ESCOLHER PLANO</button>
+              </div>
             </div>
-            <ul class="plan-features">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-unidades / Multi-filiais</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> API personalizada & Relatórios BI</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Gerente de Conta Dedicado no RJ</li>
-            </ul>
-            <button class="btn btn-secondary btn-signup-open" style="width: 100%;">Falar com Consultor</button>
           </div>
+        </div>
+
+        <!-- Tabela Comparativa de Recursos dos Planos PRO -->
+        <div class="comparison-table-wrapper reveal">
+          <h3 class="comparison-table-title">Contratação de Plano</h3>
+          <p class="comparison-table-subtitle">Escolha o plano que melhor atenda a sua necessidade no Rio de Janeiro</p>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Recursos Inclusos</th>
+                <th><span class="plan-header-badge">PRO 1</span></th>
+                <th><span class="plan-header-badge">PRO 2</span></th>
+                <th><span class="plan-header-badge">PRO 3</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Integrador de Pedidos com Sistema Vedas</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Gestão de Pedidos do Delivery</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Link Próprio de Delivery</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Relatórios Avançados do Delivery</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Impressão Automática Por Setor</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Painel de Monitoramento de Entregas</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Treinamento Completo</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Suporte Técnico Completo RJ</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Emissão de NFC-e SEFAZ RJ</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Pagamento Online Pix Instantâneo</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Pagamento Online Crédito</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Aplicativo de Entregas (Motoboy)</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Sistema de Fidelização Integrado</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Gestão de Caixa</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Integração com Motoboys Terceirizados</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Integração de Pedidos com iFood</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Controle de Estoque</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Gestão de Mesas e Comandas</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Aplicativo do Garçom</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+              <tr><td>Monitor de Produção por Setores (KDS)</td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td><td><span class="check-icon">✓</span></td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

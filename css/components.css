@@ -119,51 +119,203 @@
   font-weight: 700;
 }
 
-/* Grid de Cards dos Planos */
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
+/* --------------------------------------------------------------------------
+   TCG RETRO CARDS CAROUSEL (MENVEM OFFICIAL RETRO STYLE)
+   -------------------------------------------------------------------------- */
+.tcg-carousel-container {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
 }
 
-.plan-card {
+.tcg-carousel-track {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.tcg-card {
+  position: relative;
+  width: 270px;
+  height: 470px;
+  border-radius: 18px;
+  overflow: visible;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.tcg-card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.tcg-card.recommended {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 35px rgba(242, 194, 0, 0.5);
+}
+
+.tcg-background {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.7));
+}
+
+.tcg-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #9333ea, #eab308);
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  font-size: 0.55rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.tcg-content {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;
+  text-align: center;
+  z-index: 2;
+}
+
+.tcg-price-box {
+  margin-bottom: 10px;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+}
+
+.tcg-currency {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.tcg-price {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #d90429;
+}
+
+.tcg-month {
+  font-size: 0.6rem;
+  color: #333333;
+  font-weight: 700;
+}
+
+.retro-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #ffea00 0%, #d4a000 100%);
+  color: #000000 !important;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  font-size: 0.65rem;
+  padding: 0.85rem 0.4rem;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 #000000;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   PLAN COMPARISON TABLE (TABELA COMPARATIVA DE RECURSOS PRO)
+   -------------------------------------------------------------------------- */
+.comparison-table-wrapper {
+  margin-top: 4rem;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 2.2rem 1.8rem;
-  position: relative;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
+  padding: 2rem;
+  overflow-x: auto;
   backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
 }
 
-.plan-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--border-glow);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glow-shadow);
+.comparison-table-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.plan-card.recommended {
-  border: 2px solid var(--primary);
-  background: linear-gradient(180deg, rgba(0, 210, 255, 0.1) 0%, rgba(18, 22, 35, 0.9) 100%);
-  box-shadow: 0 0 30px rgba(0, 210, 255, 0.25);
+.comparison-table-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
 }
 
-.plan-card-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, #ff4e50, #f9d423);
-  color: #000;
-  font-size: 0.7rem;
-  font-family: var(--font-pixel);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.comparison-table th, 
+.comparison-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.comparison-table th:first-child, 
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-main);
+  width: 45%;
+}
+
+.comparison-table th {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.plan-header-badge {
+  display: inline-block;
+  background: #0066ff;
+  color: #ffffff;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .plan-name {

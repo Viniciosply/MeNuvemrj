@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isAnnual = false;
 
-  // Base Monthly Plan Prices
+  // Official Menuvem Plan Base Monthly Prices
   const basePrices = {
-    bronze: 147,
-    prata: 197,
-    ouro: 297,
-    vip: 497
+    secreto: 100,
+    bronze: 167,
+    prata: 227,
+    ouro: 267
   };
 
   function formatBRL(value) {
@@ -32,19 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const revenue = parseInt(slider.value, 10);
     displayVal.textContent = formatBRL(revenue);
 
-    // Dynamic Plan Highlight
-    const planCards = document.querySelectorAll('.plan-card');
-    planCards.forEach(c => c.classList.remove('recommended'));
+    // Dynamic TCG Card Highlight
+    const tcgCards = document.querySelectorAll('.tcg-card');
+    tcgCards.forEach(c => c.classList.remove('recommended'));
 
     let recommendedCardId = 'plan-prata';
-    if (revenue <= 8000) {
+    if (revenue <= 5000) {
+      recommendedCardId = 'plan-secreto';
+    } else if (revenue <= 15000) {
       recommendedCardId = 'plan-bronze';
-    } else if (revenue <= 25000) {
+    } else if (revenue <= 35000) {
       recommendedCardId = 'plan-prata';
-    } else if (revenue <= 45000) {
-      recommendedCardId = 'plan-ouro';
     } else {
-      recommendedCardId = 'plan-vip';
+      recommendedCardId = 'plan-ouro';
     }
 
     const recCard = document.getElementById(recommendedCardId);
@@ -55,10 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update Prices based on Billing Cycle
     const multiplier = isAnnual ? 0.8 : 1.0; // 20% discount on Annual
 
-    document.getElementById('price-bronze').textContent = Math.round(basePrices.bronze * multiplier);
-    document.getElementById('price-prata').textContent = Math.round(basePrices.prata * multiplier);
-    document.getElementById('price-ouro').textContent = Math.round(basePrices.ouro * multiplier);
-    document.getElementById('price-vip').textContent = Math.round(basePrices.vip * multiplier);
+    const elSecreto = document.getElementById('price-secreto');
+    const elBronze = document.getElementById('price-bronze');
+    const elPrata = document.getElementById('price-prata');
+    const elOuro = document.getElementById('price-ouro');
+
+    if (elSecreto) elSecreto.textContent = Math.round(basePrices.secreto * multiplier);
+    if (elBronze) elBronze.textContent = Math.round(basePrices.bronze * multiplier);
+    if (elPrata) elPrata.textContent = Math.round(basePrices.prata * multiplier);
+    if (elOuro) elOuro.textContent = Math.round(basePrices.ouro * multiplier);
 
     // Calculate Savings vs iFood 12% commission
     const ifoodCommissionCost = revenue * 0.12;
