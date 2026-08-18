@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initMobileMenu();
     initScrollAnimations();
@@ -341,3 +341,4 @@ function initMenuvemFunctionalities() {
         }
     });
 }
+

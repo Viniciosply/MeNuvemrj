@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    Menuvem.RJ - Live Interactive Smartphone Menu Simulator Engine
    ========================================================================== */
 
@@ -133,3 +133,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial render
   renderMenuItems('lanches');
 });
+
