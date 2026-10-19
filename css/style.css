@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
 
 /* --- Reset & Base --- */
 *, *::before, *::after {
@@ -9,11 +9,11 @@
 
 :root {
     /* Palette */
-    --bg-color: #050508;
-    --bg-card: rgba(13, 13, 22, 0.5);
-    --bg-card-hover: rgba(20, 20, 35, 0.7);
-    --border-color: rgba(255, 255, 255, 0.05);
-    --border-hover: rgba(100, 29, 222, 0.3);
+    --bg-color: #ffffff;
+    --bg-card: rgba(245, 245, 245, 0.9);
+    --bg-card-hover: rgba(224, 224, 224, 0.9);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(0, 0, 0, 0.2);
     
     --primary: #641DDE;         /* Roxo Oficial Menuvem */
     --primary-rgb: 100, 29, 222;

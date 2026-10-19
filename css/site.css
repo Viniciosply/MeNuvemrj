@@ -1,38 +1,464 @@
-﻿.faq-search-link {
-            display: none !important;
-            font-size: 0.85rem;
-            font-weight: 500;
-            background: transparent;
-            color: #ef4444;
-            /* red text */
-            padding: 4px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: all 0.2s;
-            border: 1px solid #ef4444;
-            /* red border */
-            font-family: var(--font-body);
-            margin-right: 1rem;
-            white-space: nowrap;
-        }
+/* =========================================================
+   Menuvem.RJ - Light Theme & Custom Components Stylesheet
+   ========================================================= */
 
-        .faq-search-link:hover {
-            background: rgba(239, 68, 68, 0.1) !important;
-            color: #ef4444;
-        }
+:root {
+    --bg-color: #ffffff;
+    --bg-surface: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
 
-        .faq-item.faq-item-active .faq-search-link {
-            display: inline-block !important;
-        }
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
 
+    --primary: #641DDE;
+    --primary-hover: #5014b8;
+    --secondary: #F2C200;
+    --secondary-hover: #d9ad00;
+
+    --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    --shadow-hover: 0 12px 30px -4px rgba(100, 29, 222, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Light Theme Base Overrides */
+html, body {
+    background-color: var(--bg-surface) !important;
+    background-image: radial-gradient(circle at 50% 0%, rgba(100, 29, 222, 0.06) 0%, rgba(248, 250, 252, 0) 60%) !important;
+    color: var(--text-primary) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+}
+
+p {
+    color: var(--text-secondary) !important;
+}
+
+/* Header & Nav */
+.header {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+.header-scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+.logo, .logo-text {
+    background: none !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.nav-links a {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+}
+
+.nav-links a:hover {
+    color: var(--primary) !important;
+}
+
+.menu-toggle {
+    color: var(--text-primary) !important;
+}
+
+.mobile-menu {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.mobile-menu-links a {
+    color: var(--text-primary) !important;
+}
+
+.btn-secondary {
+    background: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.btn-secondary:hover {
+    background: #f1f5f9 !important;
+    border-color: var(--border-hover) !important;
+}
+
+.badge {
+    background: rgba(100, 29, 222, 0.08) !important;
+    border: 1px solid rgba(100, 29, 222, 0.2) !important;
+    color: var(--primary) !important;
+}
+
+/* 4 Destaques do Hero */
+.hero-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    max-width: 1000px;
+    margin: 2.5rem auto 2.5rem auto;
+    text-align: left;
+}
+
+.hero-highlight-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem 1.25rem;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-highlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(100, 29, 222, 0.3);
+}
+
+.highlight-val {
+    font-family: var(--font-title);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+}
+
+.highlight-txt {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1.35;
+}
+
+/* 3 Planos em Destaque */
+.plans-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+    margin: 3rem 0;
+}
+
+.plan-select-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.25rem 1.75rem;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.plan-select-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(100, 29, 222, 0.4);
+}
+
+.plan-select-card.featured {
+    border: 2px solid var(--primary);
+    box-shadow: 0 10px 30px -4px rgba(100, 29, 222, 0.18);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(100, 29, 222, 0.02) 100%);
+}
+
+.plan-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    background: #f1f5f9;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.plan-badge.featured-badge {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.plan-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.plan-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    min-height: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.plan-price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.plan-price span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.plan-features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.plan-features-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-btn {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* 6 Categorias de Funcionalidades */
+.func-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.func-cat-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.func-cat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(100, 29, 222, 0.3);
+}
+
+.func-cat-badge {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(100, 29, 222, 0.15);
+}
+
+.func-cat-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.func-cat-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.25rem;
+    line-height: 1.4;
+}
+
+.func-cat-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* Suporte Pilares */
+.support-section {
+    background: #ffffff !important;
+}
+
+.support-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-top: 3rem;
+}
+
+.support-pillar-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-pillar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(100, 29, 222, 0.3);
+}
+
+.pillar-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #ffffff;
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 12px rgba(100, 29, 222, 0.3);
+}
+
+.pillar-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.pillar-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Dúvidas / FAQ */
+.faq-grid {
+    max-width: 850px;
+    margin: 2.5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: var(--shadow-card) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(100, 29, 222, 0.3) !important;
+    box-shadow: var(--shadow-hover) !important;
+}
+
+.faq-question {
+    background: #ffffff !important;
+    color: var(--text-primary) !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    padding: 1.25rem 1.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    color: var(--text-secondary) !important;
+    line-height: 1.6;
+}
+
+.faq-search-link {
+    display: none !important;
+}
+
+/* Calculadora & Elementos Interativos */
+.calc-container {
+    background: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+.calc-faturamento-display {
+    color: var(--primary) !important;
+    background: rgba(100, 29, 222, 0.08) !important;
+}
+
+.slider-labels span {
+    color: var(--text-muted) !important;
+}
+
+.menuvem-tab-btn {
+    background: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+.menuvem-tab-btn.active {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border-color: var(--primary) !important;
+}
+
+.menuvem-sub-btn {
+    background: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+.menuvem-sub-btn.active {
+    background: rgba(100, 29, 222, 0.08) !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
 
 /* Painel Video Responsive */
 .desktop-video {
     display: block;
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    background: #0c0c16;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #000;
 }
 
 @media (max-width: 768px) {
@@ -41,13 +467,12 @@
     }
 }
 
-/* Painel Video Responsive - Mobile */
 .mobile-video {
     display: none;
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    background: #0c0c16;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #000;
 }
 
 @media (max-width: 768px) {
